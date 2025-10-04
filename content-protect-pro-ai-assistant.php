@@ -30,7 +30,9 @@ if (!defined('CPP_VERSION')) {
     });
 }
 
-require_once __DIR__ . '/includes/wp-stubs.php';
+if (!function_exists('add_action')) {
+    require_once __DIR__ . '/includes/wp-stubs.php';
+}
 require_once __DIR__ . '/includes/class-cpp-settings-ai.php';
 require_once __DIR__ . '/class-cpp-ai-admin-assistant.php';
 

@@ -12,7 +12,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-require_once __DIR__ . '/wp-stubs.php';
+if (!function_exists('add_action')) {
+    require_once __DIR__ . '/wp-stubs.php';
+}
 
 class CPP_Settings_AI {
 
